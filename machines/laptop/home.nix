@@ -13,7 +13,11 @@ in {
   home-manager.users."${username}" = { pkgs, config, nur, ... }: {
     home = { stateVersion = "22.11"; };
     imports = [ ./my.nix ];
-    home.packages = with pkgs.nur; [ repos.linyinfeng.clash-for-windows ];
+    home.packages = with pkgs.nur;
+      [
+        repos.linyinfeng.clash-for-windows
+        # repos.xddxdd.dingtalk
+      ];
   };
   # lib.mkMerge [
   #   {
