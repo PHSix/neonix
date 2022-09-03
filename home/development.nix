@@ -1,6 +1,7 @@
 { pkgs, disableList ? [ ], ... }:
 let
   defaultPackages = with pkgs; [
+    vscode-fhs
     go
     rustup
     python310
