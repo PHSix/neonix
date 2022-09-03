@@ -1,5 +1,12 @@
 { pkgs, config, lib, nur, ... }:
-let username = "ph";
+let
+  username = "ph";
+  src = builtins.fetchurl {
+    url =
+      "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.19.29/Clash.for.Windows-0.19.29-x64-linux.tar.gz";
+    sha256 = "sha256-ICw9ZBGzjF/lPOqTYfTawcTciNGCbNnWR+1jejZR6bQ=";
+  };
+  cfw = pkgs.nur.repos.linyinfeng.clash-for-windows.override { inherit src; };
 in {
   users.users."${username}" = {
     isNormalUser = true;
@@ -13,11 +20,11 @@ in {
   home-manager.users."${username}" = { pkgs, config, nur, ... }: {
     home = { stateVersion = "22.11"; };
     imports = [ ./my.nix ];
-    home.packages = with pkgs.nur;
-      [
-        repos.linyinfeng.clash-for-windows
-        # repos.xddxdd.dingtalk
-      ];
+    home.packages = [
+      pkgs.nur.repos.linyinfeng.clash-for-windows
+      # cfw
+      # repos.xddxdd.dingtalk
+    ];
   };
   # lib.mkMerge [
   #   {

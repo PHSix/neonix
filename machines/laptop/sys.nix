@@ -3,6 +3,7 @@
 
 { pkgs, config, lib, ... }:
 let
+  # useProxy = "http://localhost:7890";
   useProxy = false;
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
