@@ -1,4 +1,7 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let extraConfig = builtins.readFile ./vimrc;
+in {
+
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
@@ -23,6 +26,7 @@
       coc-explorer
       coc-stylelint
       coc-rust-analyzer
+      dracula-vim
     ];
     settings = {
       ignorecase = true;
@@ -31,11 +35,6 @@
       shiftwidth = 4;
       tabstop = 4;
     };
-    extraConfig = ''
-                    set mouse=a
-      	set nu
-          set rnu
-            set tab
-    '';
+    inherit extraConfig;
   };
 }
