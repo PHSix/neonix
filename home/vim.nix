@@ -1,7 +1,6 @@
 { pkgs, ... }:
 let extraConfig = builtins.readFile ./vimrc;
 in {
-
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
@@ -27,6 +26,7 @@ in {
       coc-stylelint
       coc-rust-analyzer
       dracula-vim
+      vim-devicons
     ];
     settings = {
       ignorecase = true;
