@@ -11,5 +11,6 @@
     (import ../../home/development.nix inputs)
     (import ../../home/android.nix inputs)
     (import ../../home/jetbrains.nix inputs)
+    (import ../../home/vim.nix inputs)
   ];
 }
