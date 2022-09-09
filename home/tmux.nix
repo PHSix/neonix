@@ -7,7 +7,7 @@
     keyMode = "vi";
     newSession = true;
     prefix = "M-s";
-    terminal = "xterm-256color";
+    # terminal = "tmux-256color";
 
     disableConfirmationPrompt =
       false; # Disable confirmation prompt before killing a pane or window
@@ -94,7 +94,7 @@
       # set -g prefix M-s # set your prefix(replace C-b)(设置前缀键)
       # set -s escape-time 0 # disable ecsape reaction time(按下esc停留的时间)
       # setw -g mode-keys vi # vi mode(vi 模式的支持)
-      # set -g default-terminal "xterm-256color" # enable 256 colors (终端启动256色的支持，默认并不开启)
+      # set -g default-terminal "tmux-256color" # enable 256 colors (终端启动256色的支持，默认并不开启)
       # set-option -ga terminal-overrides ",xterm-256color:Tc"
       # set -g base-index 1 # pane set base index start on 1(设置base-index是从1开始的)
       # set-window-option -g pane-base-index 1 # pane set base index start on 1

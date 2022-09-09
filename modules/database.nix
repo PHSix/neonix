@@ -1,1 +1,1 @@
-{ pkgs, ... }: { services.mongo = { enable = true; }; }
+{ pkgs, ... }: { services.mongodb = { enable = true; }; }

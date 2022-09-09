@@ -8,7 +8,7 @@
     ../../modules/cli-tool.nix
     ../../modules/broswer.nix
     ../../modules/virtual.nix
-    ../../modules/database.nix
+    # ../../modules/database.nix
     ./hardware-configuration.nix
   ];
 }

@@ -3,8 +3,8 @@
 
 { pkgs, config, lib, ... }:
 let
-  # useProxy = "http://localhost:7890";
-  useProxy = false;
+  useProxy = "http://localhost:7890";
+  # useProxy = false;
   nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
@@ -80,6 +80,7 @@ in {
       substituters = lib.mkForce [
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://cache.nixos.org"
+        "https://mirrors.ustc.edu.cn/nix-channels/store"
       ];
     };
     gc = {

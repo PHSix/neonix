@@ -20,6 +20,12 @@
     tray-icons-reloaded
     blur-my-shell
     net-speed-simplified
+    cpudots
+    colorful-battery-indicator
+    fuzzy-app-search
+    pip-on-top
+    frequency-boost-switch
+
   ]) ++ (with pkgs.gnome; [
     gnome-tweaks
     gnome-boxes
