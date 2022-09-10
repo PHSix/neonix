@@ -94,4 +94,5 @@ in {
     allowUnfree = true;
     allowAliases = false;
   };
+
 }

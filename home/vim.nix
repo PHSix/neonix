@@ -7,6 +7,11 @@ in {
       rainbow
       vim-nix
       vim-clap
+      vim-easymotion
+      tcomment_vim
+
+      lightline-vim
+      vim-lightline-coc
 
       # coc extensions
       coc-nvim
