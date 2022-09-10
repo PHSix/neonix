@@ -94,5 +94,6 @@ in {
     allowUnfree = true;
     allowAliases = false;
   };
+  nixpkgs.system = "x86_64-linux";
 
 }

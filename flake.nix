@@ -7,18 +7,18 @@
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs =
-    { home-manager, nixpkgs, nur, neovim-nightly-overlay, ... }@inputs: {
+  outputs = { home-manager, nixpkgs, nur, ... }@inputs:
+    let
+      overlays = [ inputs.nur.overlay inputs.neovim-nightly-overlay.overlay ];
+      system = "x86_64-linux";
+    in {
       nixosConfigurations = {
         laptop = inputs.nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
           modules = [
-            inputs.home-manager.nixosModules.home-manager
-            {
-              nixpkgs.overlays =
-                [ inputs.nur.overlay inputs.neovim-nightly-overlay.overlay ];
-            }
             ./machines/laptop
+            inputs.home-manager.nixosModules.home-manager
+            { nixpkgs.overlays = overlays; }
           ];
         };
       };
