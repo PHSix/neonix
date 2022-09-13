@@ -1,7 +1,3 @@
 { pkgs, ... }: {
-  home.packages = with pkgs.jetbrains; [
-    # idea-ultimate
-    webstorm
-    goland
-  ];
+  home.packages = with pkgs.jetbrains; [ idea-ultimate webstorm goland ];
 }

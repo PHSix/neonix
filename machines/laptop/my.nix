@@ -12,5 +12,7 @@
     (import ../../home/android.nix inputs)
     (import ../../home/jetbrains.nix inputs)
     (import ../../home/vim.nix inputs)
+    (import ../../home/vim.nix inputs)
+    (pkgs.lib.callPackage ../../home/applications.nix)
   ];
 }

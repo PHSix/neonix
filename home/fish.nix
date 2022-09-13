@@ -116,7 +116,7 @@
       # set -g pure_symbol_prompt "->"
       # set -g pure_symbol_reverse_prompt "<-"
 
-      set -gx PATH $PATH:$HOME/.npm-global/bin:$HOME/.local/bin
+      set -gx PATH $PATH:$HOME/.npm-global/bin:$HOME/.local/bin:$HOME/go/bin
 
     '';
 
