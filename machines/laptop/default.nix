@@ -8,6 +8,7 @@
     ../../modules/cli-tool.nix
     ../../modules/broswer.nix
     ../../modules/virtual.nix
+    ../../home/android.nix
     # ../../modules/database.nix
     ./hardware-configuration.nix
   ];

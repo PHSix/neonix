@@ -9,10 +9,9 @@
     (import ../../home/fish.nix inputs)
     (import ../../home/neovim-deps.nix inputs)
     (import ../../home/development.nix inputs)
-    (import ../../home/android.nix inputs)
     (import ../../home/jetbrains.nix inputs)
     (import ../../home/vim.nix inputs)
     (import ../../home/vim.nix inputs)
-    (pkgs.lib.callPackage ../../home/applications.nix)
+    (import ../../home/applications.nix inputs)
   ];
 }
