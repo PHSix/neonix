@@ -9,12 +9,20 @@ set shiftwidth=4
 set mouse=a
 set autochdir
 set t_Co=256
-colorscheme dracula
+set wildmenu
+set wildoptions=pum
+set showtabline=2
+set incsearch
+colorscheme one
 language en_US
+let &t_ut=''
 
 map ; :
 map <space> <leader>
 nnoremap <silent>  <C-t> :terminal<CR>
+
+hi default BlueBorder guifg=#7DD3FC
+hi default GrayBorder guifg=#94A3B8
 
 augroup quit_map 
 	autocmd filetype help nmap <silent><buffer> q :q<CR>
@@ -160,13 +168,47 @@ nnoremap <silent><nowait> <leader>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <leader>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <leader>p  :<C-u>CocListResume<CR>
-" open explorer
+" open explorer 
 nnoremap <silent> <C-n> :<C-u>CocCommand explorer<CR>
-
 
 
 nnoremap <silent> <leader>fw :<C-u>Clap grep2<CR>
 nnoremap <silent> <leader>fu :<C-u>Clap history<CR>
 nnoremap <silent> <leader>fb :<C-u>Clap buffers<CR>
 
+let g:coc_global_extensions = [
+		\ "@yaegassy/coc-tailwindcss3",
+		\ "coc-lightbulb",
+	  \ ]
+ 
 nmap s <Plug>(easymotion-overwin-f2)
+
+
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+      \   'right': [ ['close'] ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ }
+      \ }
+
+let g:lightline#bufferline#show_number = 2
+
+nmap <Leader>1 <Plug>lightline#bufferline#go(1)
+nmap <Leader>2 <Plug>lightline#bufferline#go(2)
+nmap <Leader>3 <Plug>lightline#bufferline#go(3)
+nmap <Leader>4 <Plug>lightline#bufferline#go(4)
+nmap <Leader>5 <Plug>lightline#bufferline#go(5)
+nmap <Leader>6 <Plug>lightline#bufferline#go(6)
+nmap <Leader>7 <Plug>lightline#bufferline#go(7)
+nmap <Leader>8 <Plug>lightline#bufferline#go(8)
+nmap <Leader>9 <Plug>lightline#bufferline#go(9)
+nmap <Leader>0 <Plug>lightline#bufferline#go(10)
+
+

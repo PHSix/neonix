@@ -9,29 +9,40 @@ in {
       vim-clap
       vim-easymotion
       tcomment_vim
+      vim-startify
+      indentLine
+      vim-floaterm
 
+      # colorscheme
       lightline-vim
+      lightline-bufferline
       vim-lightline-coc
+      dracula-vim
+      vim-devicons
+      vim-one
 
       # coc extensions
       coc-nvim
-      coc-json
       coc-git
       coc-yank
-      coc-css
+      coc-flutter
       coc-clap
       coc-pairs
-      coc-emmet
       coc-vimlsp
-      coc-eslint
       coc-pyright
+
+      # frontend development
       coc-tsserver
+      coc-json
+      coc-css
+      coc-emmet
+      coc-html
+      coc-stylelint
+      coc-eslint
+
       coc-snippets
       coc-explorer
-      coc-stylelint
       coc-rust-analyzer
-      dracula-vim
-      vim-devicons
     ];
     settings = {
       ignorecase = true;

@@ -6,6 +6,10 @@
     android-tools
     flutter
     kotlin
-    dart
+
+    # for linux platform
+    gtk3
+    ninja
+    pkg-config
   ];
 }

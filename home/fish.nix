@@ -40,8 +40,8 @@
       set -gx FLUTTER_STORAGE_BASE_URL "https://mirrors.tuna.tsinghua.edu.cn/flutter"
       set -gx PUB_HOSTED_URL "https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
       set -gx CHROME_EXECUTABLE "/usr/bin/google-chrome-stable"
-      # set -gx ANDROID_HOME "/home/ph/Android/Sdk/"
-      set -gx NO_PROXY localhost
+      set -gx ANDROID_HOME $HOME/Android/Sdk/
+      set -gx NO_PROXY localhost,::1,127.0.0.1
 
 
       # environment variable

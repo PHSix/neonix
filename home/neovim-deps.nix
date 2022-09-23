@@ -10,6 +10,8 @@
     ]) ++ (with pkgs.nodePackages; [
       lua-fmt
       prettier
+      vscode-html-languageserver-bin
+      vscode-css-languageserver-bin
 
       eslint
     ]) ++
