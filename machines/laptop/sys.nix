@@ -66,6 +66,7 @@ in {
     proxy = if builtins.isString useProxy then {
       httpProxy = useProxy;
       httpsProxy = useProxy;
+      noProxy = "localhost,::1,127.0.0.1";
     } else
       { };
   };

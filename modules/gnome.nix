@@ -13,6 +13,9 @@
     };
   };
   environment.systemPackages = (with pkgs.gnomeExtensions; [
+    compiz-alike-windows-effect
+    just-perfection
+    burn-my-windows
     proxy-switcher
     removable-drive-menu
     appindicator

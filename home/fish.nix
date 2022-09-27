@@ -52,8 +52,8 @@
       end
 
       function unproxy
-      	unset http_proxy
-      	unset https_proxy
+      	set -e http_proxy
+      	set -e https_proxy
       end
 
 
