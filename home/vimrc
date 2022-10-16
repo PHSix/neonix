@@ -172,7 +172,7 @@ nnoremap <silent> <C-n> :<C-u>CocCommand explorer<CR>
 
 
 nnoremap <silent> <leader>fw :<C-u>Clap grep2<CR>
-nnoremap <silent> <leader>fu :<C-u>Clap history<CR>
+nnoremap <silent> <leader>fo :<C-u>Clap history<CR>
 nnoremap <silent> <leader>fb :<C-u>Clap buffers<CR>
 
 let g:coc_global_extensions = [
