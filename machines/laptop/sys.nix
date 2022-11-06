@@ -28,7 +28,10 @@ in {
 
   programs.adb.enable = true;
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services = {
+    xserver.videoDrivers = [ "nvidia" ];
+    sshd.enable = true;
+  };
   environment.systemPackages = [ nvidia-offload ];
   hardware = {
     nvidia = {
@@ -63,6 +66,7 @@ in {
     hostName = "nixos"; # Define your hostname.
     # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # useDHCP = true;
+    firewall.allowedTCPPorts = [22];
     proxy = if builtins.isString useProxy then {
       httpProxy = useProxy;
       httpsProxy = useProxy;

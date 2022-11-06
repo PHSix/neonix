@@ -9,7 +9,7 @@
       		"FiraCode Nerd Font Mono",
       		"LXGW WenKai Mono",
       	}),
-      	font_size = fontSize,
+      	font_size = ${builtins.toString fontSize},
       	enable_tab_bar = false,
       	window_background_opacity = ${opacity},
       	window_padding = {

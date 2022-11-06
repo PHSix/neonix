@@ -26,6 +26,7 @@
       typescript
       pyright
       bash-language-server
+      typescript
       typescript-language-server
       vscode-css-languageserver-bin
       vscode-json-languageserver
