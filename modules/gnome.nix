@@ -7,7 +7,8 @@
       displayManager.gdm.wayland = true;
       desktopManager = { gnome.enable = true; };
       layout = "us";
-      xkbOptions = "caps:escape";
+      # xkbOptions = "caps:escape";
+      xkbOptions = "caps:ctrl";
       autoRepeatDelay = 300;
       autoRepeatInterval = 30;
     };

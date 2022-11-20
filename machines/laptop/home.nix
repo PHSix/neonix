@@ -22,6 +22,7 @@ in {
     imports = [ ./my.nix ];
     home.packages = [
       pkgs.nur.repos.linyinfeng.clash-for-windows
+      pkgs.nur.repos.xddxdd.dingtalk
       # cfw
       # repos.xddxdd.dingtalk
     ];
